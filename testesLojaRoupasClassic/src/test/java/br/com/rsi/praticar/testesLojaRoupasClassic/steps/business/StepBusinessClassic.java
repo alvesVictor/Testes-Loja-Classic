@@ -1,7 +1,11 @@
 package br.com.rsi.praticar.testesLojaRoupasClassic.steps.business;
 
+import java.util.List;
+import java.util.UUID;
+
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -25,6 +29,70 @@ public class StepBusinessClassic {
 	public void openHome(String url) {
 		viewElement.open(url);
 		viewElement.getDriver().manage().window().maximize();
+	}
+
+	public void clicarLinkEntrar() {
+		viewElement.clickAndWait(page.getLinkEntrar(), 10);
+	}
+
+	public void clicarLinkCriarConta() {
+		viewElement.clickAndWait(page.getLinkCriarConta(), 10);
+	}
+
+	public void selecionarTituloSocial(String tSocial) {
+		page.getRadioBtnTituloSocial().forEach(ele -> {
+			if(ele.getText().contains(tSocial)){
+				viewElement.clickAndWait(ele, 10);
+			}
+		});
+	}
+
+	public void inserirNome(String nome) {
+		viewElement.sendText(page.getCampoNome(), nome);
+	}
+
+	public void inserirSobrenome(String sobrenome) {
+		viewElement.sendText(page.getCampoSobrenome(), sobrenome);
+	}
+
+	public void inserirEmail(String email) {
+		String[] mail = email.split("@");
+		email = mail[0] + UUID.randomUUID() + "@" + mail[1];
+		viewElement.sendText(page.getCampoEmail(), email);
+	}
+
+	public void inserirSenha(String senha) {
+		viewElement.sendText(page.getCampoSenha(), senha);
+	}
+
+	public void clicarBtnMostrar() {
+		viewElement.clickAndWait(page.getBtnMostrarSenha(), 10);
+	}
+
+	public void inserirDataNascimento(String dataNascimento) {
+		viewElement.sendText(page.getCampoDataNascimento(), dataNascimento);
+	}
+
+	public void selecionarReceberOfertas(boolean ofertas) {
+		if(ofertas) {
+			viewElement.findElement(page.getReceberOfertas()).click();
+		}
+	}
+	
+	public void selecionarReceberNoticias(boolean noticias) {
+		if(noticias) {
+			viewElement.findElement(page.getReceberNoticias()).click();
+		}
+	}
+
+	public void clicarBtnSalvar() {
+		viewElement.click(page.getBtnSalvar());
+		page.waitFor(5).seconds();
+	}
+
+	public void verificarUsuarioLogado(String nome, String sobrenome) {
+		LOG.info(nome.concat(" ").concat(sobrenome));
+		Assert.assertTrue(page.element(page.getUserInfo()).containsText(nome.concat(" ").concat(sobrenome)));
 	}
 
 }
