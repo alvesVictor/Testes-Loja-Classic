@@ -30,8 +30,14 @@ public class PageObjectClassic extends PageObject{
 	@FindBy(name="password")
 	private WebElement campoSenha;
 	
+	@FindBy(name="new_password")
+	private WebElement campoSenhaNova;
+	
 	@FindBy(xpath="//button[contains(text(), 'Mostrar')]")
 	private WebElement btnMostrarSenha;
+	
+	@FindBy(xpath="//button[contains(text(), 'Entrar')]")
+	private WebElement btnEntrar;
 	
 	@FindBy(name="birthday")
 	private WebElement campoDataNascimento;
@@ -53,6 +59,12 @@ public class PageObjectClassic extends PageObject{
 	
 	@FindBy(xpath="//div[@class='user-info']/a[last()]")
 	private WebElement userInfo;
+	
+	@FindBy(xpath="//i/preceding::span[contains(text(),'')]/preceding::a[contains(@href,'identidade')]")
+	private WebElement informacoesUsuario;
+	
+	@FindBy(xpath="//article[@role='alert']")
+	private WebElement alertAlterarSenha;
 
 	public WebElement getLinkEntrar() {
 		return linkEntrar;
@@ -96,6 +108,22 @@ public class PageObjectClassic extends PageObject{
 
 	public WebElement getUserInfo() {
 		return userInfo;
+	}
+
+	public WebElement getBtnEntrar() {
+		return btnEntrar;
+	}
+
+	public WebElement getCampoSenhaNova() {
+		return campoSenhaNova;
+	}
+
+	public WebElement getInformacoesUsuario() {
+		return informacoesUsuario;
+	}
+
+	public WebElement getAlertAlterarSenha() {
+		return alertAlterarSenha;
 	}
 	
 	

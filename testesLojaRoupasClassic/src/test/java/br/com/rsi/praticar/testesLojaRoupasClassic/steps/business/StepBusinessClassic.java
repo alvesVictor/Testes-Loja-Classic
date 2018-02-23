@@ -1,5 +1,7 @@
 package br.com.rsi.praticar.testesLojaRoupasClassic.steps.business;
 
+import static org.junit.Assert.assertTrue;
+
 import java.util.List;
 import java.util.UUID;
 
@@ -93,6 +95,31 @@ public class StepBusinessClassic {
 	public void verificarUsuarioLogado(String nome, String sobrenome) {
 		LOG.info(nome.concat(" ").concat(sobrenome));
 		Assert.assertTrue(page.element(page.getUserInfo()).containsText(nome.concat(" ").concat(sobrenome)));
+	}
+
+	public void clicarBtnEntrar() {
+		viewElement.clickAndWait(page.getBtnEntrar(), 10);
+	}
+
+	public void inserirEmailLogin(String email) {
+		viewElement.sendText(page.getCampoEmail(), email);
+	}
+
+	public void inserirNovaSenha(String nSenha) {
+		viewElement.sendText(page.getCampoSenhaNova(), nSenha);
+	}
+
+	public void clicarLinkComNomeUsuario() {
+		viewElement.clickAndWait(page.getUserInfo(), 10);
+	}
+
+	public void clicarOpcaoInformacao() {
+		viewElement.clickAndWait(page.getInformacoesUsuario(), 10);
+	}
+
+	public void verificarMenssagemTela(String msg) {
+		page.waitFor(page.getAlertAlterarSenha()).isPresent();
+		assertTrue(page.element(page.getAlertAlterarSenha()).containsText(msg));
 	}
 
 }

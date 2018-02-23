@@ -50,10 +50,25 @@ public class StepDefinitionClassic {
 	public void insiro_no_campo_Email(String email) throws Throwable {
 		stepB.inserirEmail(email);
 	}
+	
+	@When("^insiro no campo de login 'Email' \"([^\"]*)\"$")
+	public void insiro_no_campo_de_login_Email(String email) throws Throwable {
+		stepB.inserirEmailLogin(email);
+	}
+	
+	@When("^insiro no campo de login 'Senha' \"([^\"]*)\"$")
+	public void insiro_no_campo_de_login_Senha(String senha) throws Throwable {
+		stepB.inserirSenha(senha);
+	}
 
 	@When("^insiro no campo 'Senha' \"([^\"]*)\"$")
 	public void insiro_no_campo_Senha(String senha) throws Throwable {
 		stepB.inserirSenha(senha);
+	}
+	
+	@When("^insiro no campo 'Nova_senha' \"([^\"]*)\"$")
+	public void insiro_no_campo_Nova_senha(String nSenha) throws Throwable {
+		stepB.inserirNovaSenha(nSenha);
 	}
 
 	@When("^clico no botao 'Mostrar'$")
@@ -61,6 +76,11 @@ public class StepDefinitionClassic {
 		stepB.clicarBtnMostrar();
 	}
 
+	@When("^clico no botao 'Entrar'$")
+	public void clico_no_botao_Entrar() throws Throwable {
+		stepB.clicarBtnEntrar();
+	}
+	
 	@When("^insiro no campo 'Data_de_nascimento' \"([^\"]*)\"$")
 	public void insiro_no_campo_Data_de_nascimento(String dataNascimento) throws Throwable {
 		stepB.inserirDataNascimento(dataNascimento);
@@ -80,9 +100,25 @@ public class StepDefinitionClassic {
 	public void clico_no_botao_Salvar() throws Throwable {
 		stepB.clicarBtnSalvar();
 	}
+	
+	@When("^clico no link com o nome do usuario$")
+	public void clico_no_link_com_o_nome_do_usuario() throws Throwable {
+		stepB.clicarLinkComNomeUsuario();
+	}
+
+	@When("^clico na opcao 'Informacao'$")
+	public void clico_na_opcao_Informacao() throws Throwable {
+		stepB.clicarOpcaoInformacao();
+	}
+	
 	@Then("^verifico se usuario esta logado \"([^\"]*)\" \"([^\"]*)\"$")
 	public void verifico_se_usuario_esta_logado(String nome, String sobrenome) throws Throwable {
 		stepB.verificarUsuarioLogado(nome, sobrenome);
+	}
+	
+	@Then("^verifico a menssagem de na tela \"([^\"]*)\"$")
+	public void verifico_a_menssagem_de_na_tela(String msg) throws Throwable {
+		stepB.verificarMenssagemTela(msg);
 	}
 
 }
