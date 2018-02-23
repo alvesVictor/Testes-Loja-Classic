@@ -65,6 +65,30 @@ public class PageObjectClassic extends PageObject{
 	
 	@FindBy(xpath="//article[@role='alert']")
 	private WebElement alertAlterarSenha;
+	
+	@FindBy(xpath="//a[contains(text(), 'chiffon estampado')]")
+	private WebElement vestidoChiffon;
+	
+	@FindBy(xpath="//input[starts-with(@placeholder,'Pesquisar')]")
+	private WebElement campoPesquisa;
+	
+	@FindBy(name="group[1]")
+	private WebElement selectTamanho;
+	
+	@FindBy(xpath="//li[@class='float-xs-left input-container']/label")
+	private List<WebElement> cores;
+	
+	@FindBy(name="qty")
+	private WebElement qtdItem;
+	
+	@FindBy(xpath="//button[@class='btn btn-primary add-to-cart']")
+	private WebElement addCarrinho;
+	
+	@FindBy(xpath="//div[@class='modal fade in']")
+	private WebElement menssagemCarrinho;
+	
+	@FindBy(xpath="//h4[contains(@id, 'myModalLabel')]")
+	private WebElement menssagemCarrinhoResultado;
 
 	public WebElement getLinkEntrar() {
 		return linkEntrar;
@@ -124,6 +148,38 @@ public class PageObjectClassic extends PageObject{
 
 	public WebElement getAlertAlterarSenha() {
 		return alertAlterarSenha;
+	}
+
+	public WebElement getVestidoChiffon() {
+		return vestidoChiffon;
+	}
+
+	public WebElement getCampoPesquisa() {
+		return campoPesquisa;
+	}
+
+	public WebElement getSelectTamanho() {
+		return selectTamanho;
+	}
+
+	public List<WebElement> getCores() {
+		return cores;
+	}
+
+	public WebElement getQtdItem() {
+		return qtdItem;
+	}
+
+	public WebElement getAddCarrinho() {
+		return addCarrinho;
+	}
+
+	public WebElement getMenssagemCarrinho() {
+		return menssagemCarrinho;
+	}
+
+	public WebElement getMenssagemCarrinhoResultado() {
+		return menssagemCarrinhoResultado;
 	}
 	
 	

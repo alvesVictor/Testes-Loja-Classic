@@ -122,4 +122,39 @@ public class StepBusinessClassic {
 		assertTrue(page.element(page.getAlertAlterarSenha()).containsText(msg));
 	}
 
+	public void inserirCampoBusca(String busca) {
+		viewElement.sendText(page.getCampoPesquisa(), busca);
+		viewElement.submit(page.getCampoPesquisa());
+	}
+
+	public void selecionarVestidoChiffon() {
+		viewElement.clickAndWait(page.getVestidoChiffon(), 10);
+	}
+
+	public void selecionarTamanho(String tamanho) {
+		viewElement.selectByVisibleText(page.getSelectTamanho(), tamanho);
+	}
+
+	public void selecionarCor(String cor) {
+		page.getCores().forEach(elemento ->{
+			if(elemento.getText().contains(cor)) {
+				elemento.findElement(By.tagName("input")).click();
+			}
+		});
+	}
+
+	public void selecionarQuantidade(String qtd) {
+		viewElement.clear(page.getQtdItem());
+		viewElement.sendText(page.getQtdItem(), qtd);
+	}
+
+	public void clicarBtnAdicionar() {
+		viewElement.clickAndWait(page.getAddCarrinho(), 10);
+	}
+
+	public void verificarMenssagemResultado(String msg) {
+		page.waitFor(page.getMenssagemCarrinho()).isDisplayed();
+		assertTrue(page.element(page.getMenssagemCarrinhoResultado()).containsText(msg));
+	}
+
 }

@@ -17,10 +17,7 @@ Scenario Outline: Alterar Senha
   And clico no botao 'Mostrar'
   And clico no botao 'Salvar'
   Then verifico a menssagem de na tela "<msg>"
-  
-  
-  
-    
+
 Examples:
    | url                     		|email						|senha	|nome	|sobrenome	|nSenha|msg|
    | http://10.1.10.133:8080/br/ 	|victor.santos@rsinet.com.br|123456	|victor	|alves		|123456|Informações atualizadas com sucesso.|

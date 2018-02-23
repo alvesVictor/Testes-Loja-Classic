@@ -111,6 +111,42 @@ public class StepDefinitionClassic {
 		stepB.clicarOpcaoInformacao();
 	}
 	
+	@When("^insiro no campo de busca \"([^\"]*)\"$")
+	public void insiro_no_campo_de_busca(String busca) throws Throwable {
+		stepB.inserirCampoBusca(busca);
+		
+	}
+	
+	@When("^seleciono o vestido 'Chiffon'$")
+	public void seleciono_o_vestido_Chiffon() throws Throwable {
+		stepB.selecionarVestidoChiffon();
+	}
+	
+	@When("^seleciono 'Tamanho' \"([^\"]*)\"$")
+	public void seleciono_Tamanho(String tamanho) throws Throwable {
+		stepB.selecionarTamanho(tamanho);
+	}
+
+	@When("^seleciono 'Cor' \"([^\"]*)\"$")
+	public void seleciono_Cor(String cor) throws Throwable {
+		stepB.selecionarCor(cor);
+	}
+
+	@When("^seleciono 'Quantidade' \"([^\"]*)\"$")
+	public void seleciono_Quantidade(String qtd) throws Throwable {
+		stepB.selecionarQuantidade(qtd);
+	}
+
+	@When("^clico no botao 'Adicionar'$")
+	public void clico_no_botao_Adicionar() throws Throwable {
+		stepB.clicarBtnAdicionar();
+	}
+
+	@Then("^verifico menssagem de resultado \"([^\"]*)\"$")
+	public void verifico_menssagem_de_resultado(String msg) throws Throwable {
+		stepB.verificarMenssagemResultado(msg);
+	}
+	
 	@Then("^verifico se usuario esta logado \"([^\"]*)\" \"([^\"]*)\"$")
 	public void verifico_se_usuario_esta_logado(String nome, String sobrenome) throws Throwable {
 		stepB.verificarUsuarioLogado(nome, sobrenome);
