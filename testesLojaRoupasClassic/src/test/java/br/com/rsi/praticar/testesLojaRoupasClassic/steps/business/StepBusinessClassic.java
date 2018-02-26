@@ -173,4 +173,20 @@ public class StepBusinessClassic {
 		page.getProdutos().get(prod-1).click();
 	}
 
+	public void filtrarTamanho(String tam) {
+		page.getFiltroTamanhos().forEach(t ->{
+			if(t.getText().contains(tam)){			
+				t.click();
+			}
+		});
+	}
+
+	public void filtrarEstilo(String estilo) {
+		page.getFiltroEstilos().forEach(e ->{
+			if(e.getText().contains(estilo)){			
+				e.click();
+			}
+		});
+	}
+
 }

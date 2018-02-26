@@ -151,6 +151,16 @@ public class StepDefinitionClassic {
 	public void filtro_pela_cor(String cor) throws Throwable {
 		stepB.filtrarCor(cor);
 	}
+	
+	@When("^filtro pelo tamanho \"([^\"]*)\"$")
+	public void filtro_pelo_tamanho(String tam) throws Throwable {
+		stepB.filtrarTamanho(tam);
+	}
+	
+	@When("^filtro pelo estilo \"([^\"]*)\"$")
+	public void filtro_pelo_estilo(String estilo) throws Throwable {
+		stepB.filtrarEstilo(estilo);
+	}
 
 	@When("^seleciono o produto \"([^\"]*)\"$")
 	public void seleciono_o_produto(int prod) throws Throwable {
