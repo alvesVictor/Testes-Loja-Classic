@@ -107,6 +107,9 @@ public class PageObjectClassic extends PageObject{
 	
 	@FindBy(xpath="//a[starts-with(@class,'thumbnail product')]")
 	private List<WebElement> produtos;
+	
+	@FindBy(xpath="//li[@class='filter-block']")
+	private List<WebElement> filtrosAtivos;
 
 	
 	public WebElement getLinkEntrar() {
@@ -223,6 +226,10 @@ public class PageObjectClassic extends PageObject{
 
 	public List<WebElement> getProdutos() {
 		return produtos;
+	}
+
+	public List<WebElement> getFiltrosAtivos() {
+		return filtrosAtivos;
 	}
 	
 	

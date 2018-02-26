@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 
 import io.openbdt.element.WebBrowserScreenElement;
+import javassist.expr.NewArray;
 import br.com.rsi.praticar.testesLojaRoupasClassic.pages.PageObjectClassic;
 import jxl.common.Logger;
 import net.serenity_bdd.core.annotations.findby.By;
@@ -187,6 +188,28 @@ public class StepBusinessClassic {
 				e.click();
 			}
 		});
+	}
+
+	public void filtrarComposicao(String compo) {
+		page.getFiltroComposicao().forEach(c ->{
+			if(c.getText().contains(compo)){			
+				c.click();
+			}
+		});
+	}
+
+	public void removerFiltroAtivo(String filtro) {
+		page.getFiltrosAtivos().forEach(f ->{
+			LOG.info(f.getText());
+			if(f.getText().contains(filtro)) {
+				f.findElement(By.tagName("i")).click();
+			}
+		});
+		page.waitFor(5).seconds();
+	}
+
+	public void verificarFiltroRemovido() {
+		assertTrue(page.getFiltrosAtivos().size() == 1);
 	}
 
 }

@@ -161,10 +161,20 @@ public class StepDefinitionClassic {
 	public void filtro_pelo_estilo(String estilo) throws Throwable {
 		stepB.filtrarEstilo(estilo);
 	}
+	
+	@When("^filtro pela composicao \"([^\"]*)\"$")
+	public void filtro_pela_composicao(String compo) throws Throwable {
+		stepB.filtrarComposicao(compo);
+	}
 
 	@When("^seleciono o produto \"([^\"]*)\"$")
 	public void seleciono_o_produto(int prod) throws Throwable {
 		stepB.selecionarProduto(prod);
+	}
+	
+	@When("^removo de 'Filtros ativos' \"([^\"]*)\"$")
+	public void removo_de_Filtros_ativos(String filtro) throws Throwable {
+		stepB.removerFiltroAtivo(filtro);
 	}
 	
 	@Then("^verifico menssagem de resultado \"([^\"]*)\"$")
@@ -181,5 +191,11 @@ public class StepDefinitionClassic {
 	public void verifico_a_menssagem_na_tela(String msg) throws Throwable {
 		stepB.verificarMenssagemTela(msg);
 	}
+	
+	@Then("^verifico se o filtro foi removido$")
+	public void verifico_se_o_filtro_foi_removido() throws Throwable {
+		stepB.verificarFiltroRemovido();
+	}
+
 
 }
