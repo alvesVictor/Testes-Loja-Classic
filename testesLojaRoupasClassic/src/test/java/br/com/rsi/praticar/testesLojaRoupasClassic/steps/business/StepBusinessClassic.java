@@ -157,4 +157,20 @@ public class StepBusinessClassic {
 		assertTrue(page.element(page.getMenssagemCarrinhoResultado()).containsText(msg));
 	}
 
+	public void clicarLinkTodosProdutos() {
+		viewElement.click(page.getLinkTodosProdutos());
+	}
+
+	public void filtrarCor(String cor) {
+		page.getFiltroCores().forEach(c ->{
+			if(c.getText().contains(cor)){			
+				c.click();
+			}
+		});
+	}
+
+	public void selecionarProduto(int prod) {
+		page.getProdutos().get(prod-1).click();
+	}
+
 }

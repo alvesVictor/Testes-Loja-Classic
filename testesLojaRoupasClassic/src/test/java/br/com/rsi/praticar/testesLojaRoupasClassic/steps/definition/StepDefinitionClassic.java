@@ -142,6 +142,21 @@ public class StepDefinitionClassic {
 		stepB.clicarBtnAdicionar();
 	}
 
+	@When("^clico no link 'Todos os produtos'$")
+	public void clico_no_link_Todos_os_produtos() throws Throwable {
+		stepB.clicarLinkTodosProdutos();
+	}
+
+	@When("^filtro pela cor \"([^\"]*)\"$")
+	public void filtro_pela_cor(String cor) throws Throwable {
+		stepB.filtrarCor(cor);
+	}
+
+	@When("^seleciono o produto \"([^\"]*)\"$")
+	public void seleciono_o_produto(int prod) throws Throwable {
+		stepB.selecionarProduto(prod);
+	}
+	
 	@Then("^verifico menssagem de resultado \"([^\"]*)\"$")
 	public void verifico_menssagem_de_resultado(String msg) throws Throwable {
 		stepB.verificarMenssagemResultado(msg);
@@ -152,8 +167,8 @@ public class StepDefinitionClassic {
 		stepB.verificarUsuarioLogado(nome, sobrenome);
 	}
 	
-	@Then("^verifico a menssagem de na tela \"([^\"]*)\"$")
-	public void verifico_a_menssagem_de_na_tela(String msg) throws Throwable {
+	@Then("^verifico a menssagem na tela \"([^\"]*)\"$")
+	public void verifico_a_menssagem_na_tela(String msg) throws Throwable {
 		stepB.verificarMenssagemTela(msg);
 	}
 

@@ -89,7 +89,26 @@ public class PageObjectClassic extends PageObject{
 	
 	@FindBy(xpath="//h4[contains(@id, 'myModalLabel')]")
 	private WebElement menssagemCarrinhoResultado;
+	
+	@FindBy(xpath="//a[contains(normalize-space(text()), 'Todos os produtos')]")
+	private WebElement linkTodosProdutos;
+	
+	@FindBy(xpath="//a[contains(@href, 'Cor-')]/parent::label")
+	private List<WebElement> filtroCores;
+	
+	@FindBy(xpath="//a[contains(@href, 'Tamanho-')]/parent::label")
+	private List<WebElement> filtroTamanhos;
+	
+	@FindBy(xpath="//a[contains(@href, 'Composi')]/parent::label")
+	private List<WebElement> filtroComposicao;
+	
+	@FindBy(xpath="//a[contains(@href, 'Estilos-')]/parent::label")
+	private List<WebElement> filtroEstilos;
+	
+	@FindBy(xpath="//a[starts-with(@class,'thumbnail product')]")
+	private List<WebElement> produtos;
 
+	
 	public WebElement getLinkEntrar() {
 		return linkEntrar;
 	}
@@ -180,6 +199,30 @@ public class PageObjectClassic extends PageObject{
 
 	public WebElement getMenssagemCarrinhoResultado() {
 		return menssagemCarrinhoResultado;
+	}
+
+	public WebElement getLinkTodosProdutos() {
+		return linkTodosProdutos;
+	}
+
+	public List<WebElement> getFiltroCores() {
+		return filtroCores;
+	}
+
+	public List<WebElement> getFiltroTamanhos() {
+		return filtroTamanhos;
+	}
+
+	public List<WebElement> getFiltroComposicao() {
+		return filtroComposicao;
+	}
+
+	public List<WebElement> getFiltroEstilos() {
+		return filtroEstilos;
+	}
+
+	public List<WebElement> getProdutos() {
+		return produtos;
 	}
 	
 	

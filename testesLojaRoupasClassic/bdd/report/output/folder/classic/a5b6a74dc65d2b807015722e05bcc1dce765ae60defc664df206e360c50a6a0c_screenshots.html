@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-bdd-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname"></span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <a
+                    href="c4243d049efc95aca671dcfbbf8323649628b410187b3278cb3a8f6dd11db04d.html">Filtrar Pela Cor Verde E Adicionar Ao Ca&hellip;</a>
+                > <a
+                    href="a5b6a74dc65d2b807015722e05bcc1dce765ae60defc664df206e360c50a6a0c.html">Filtrar pela cor Verde </a>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 26-02-2018 10:05</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Filtrar Pela Cor Verde E Adicionar Ao Carrinho</span>
+                                    <span class="badge tag-badge">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge">
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" href="cb9981c8e36a5e8bfbbec2506fbf0e252698f29cbd025e9254eac695fa3764d3.html">Classic
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-3x' title='SUCCESS'></i></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Filtrar Pela Cor Verde
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Open home: http://10.{{&lt;qtd&gt;}}.10.133:8080/br/</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="986ff659f02d8c88792e38017b541f8b9e5e12e3089102d95c8488df7171439f.png" title="Given estou na pagina inicial do site &quot;&lt;url&gt;&quot;" width="960"/>
+                <img src="986ff659f02d8c88792e38017b541f8b9e5e12e3089102d95c8488df7171439f.png" title="Open home: http://10.1.10.133:8080/br/" width="960"/>
+                <img src="1e709f807ffefef946b2664518acd37e3dfcef0b4c005bd3ef16ea0a955beecf.png" title="When clico no link 'Todos os produtos'" width="960"/>
+                <img src="ccbbc354e8c5f904fdcd24c9aac5816c62340a2d5b7dbf99eb9b2a1a526992dc.png" title="And filtro pela cor &quot;&lt;cor&gt;&quot;" width="960"/>
+                <img src="498977a135acbcf66e302d06017b55e5f23da4f62ae5b615f619fff611b5b84c.png" title="And seleciono o produto &quot;&lt;prod&gt;&quot;" width="960"/>
+                <img src="2f87a55b9128bba4581edc52267c8982c588f97c27798c451e219ce3759d7e61.png" title="And seleciono 'Tamanho' &quot;&lt;tam&gt;&quot;" width="960"/>
+                <img src="3988d5651c292204e85cbd04fc4d77e50a016cdfddee5ee650405c44afd66d4e.png" title="And seleciono 'Cor' &quot;&lt;cor&gt;&quot;" width="960"/>
+                <img src="f7f314281b6ecf4540a0e54fe6e93b103f3261eaaa0a7a7a0ca83eabb1664081.png" title="And seleciono 'Cor' &quot;&lt;cor&gt;&quot;" width="960"/>
+                <img src="0d0eb17f5fbb5384d1b56841bd388eb9decffaf0750f6e790b9b884a39393a87.png" title="And seleciono 'Quantidade' &quot;&lt;qtd&gt;&quot;" width="960"/>
+                <img src="959862e2aad8c1d7ac2da53e0bce7a5b0d5d61c305383b423b2fb29e256d8952.png" title="And seleciono 'Quantidade' &quot;&lt;qtd&gt;&quot;" width="960"/>
+                <img src="d1e7a3a1b04d06962a96834d81a13da6bd47cc88be5f1f6df16cdc824a6553ff.png" title="And clico no botao 'Adicionar'" width="960"/>
+                <img src="54b6901144e322c595c97d0a56e6a245d53ddcf4d5bdf83bef03eb88970035f5.png" title="And clico no botao 'Adicionar'" width="960"/>
+                <img src="cdd4af1a86938893acbb7c64c155afb251ccfa832d041a38fb68034454c18da0.png" title="Then verifico menssagem de resultado &quot;&lt;msg&gt;&quot;: <span class='success-color'>SUCCESS</span>" width="960"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.3.0</span>
+</div>
+</body>
+</html>
