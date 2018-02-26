@@ -228,4 +228,17 @@ public class StepBusinessClassic {
 		assertTrue(!page.element(page.getSectionFiltrosAtivos()).isPresent());
 	}
 
+	public void clicarOrdenarPor() {
+		viewElement.click(page.getBtnOrdenar());
+	}
+
+	public void selecionarOpcaoOrdenacao(String opcao) {
+		page.getLinksOrdenar().forEach(op ->{
+			viewElement.mouseOver(op);
+			if(op.getText().contains(opcao)) {
+				op.click();
+			}
+		});
+	}
+
 }

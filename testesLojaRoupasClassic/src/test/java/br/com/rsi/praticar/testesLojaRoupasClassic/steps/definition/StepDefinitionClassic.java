@@ -186,6 +186,16 @@ public class StepDefinitionClassic {
 	public void clico_no_botao_limpar_tudo() throws Throwable {
 		stepB.clicarBotaoLimparTudo();
 	}
+	
+	@When("^clico em 'Ordenar por'$")
+	public void clico_em_Ordenar_por() throws Throwable {
+		stepB.clicarOrdenarPor();
+	}
+
+	@When("^seleciono a opcao de ordenacao \"([^\"]*)\"$")
+	public void seleciono_a_opcao_de_ordenacao(String opcao) throws Throwable {
+		stepB.selecionarOpcaoOrdenacao(opcao);
+	}
 
 	@Then("^verifico se removeu todos os filtros$")
 	public void verifico_se_removeu_todos_os_filtros() throws Throwable {

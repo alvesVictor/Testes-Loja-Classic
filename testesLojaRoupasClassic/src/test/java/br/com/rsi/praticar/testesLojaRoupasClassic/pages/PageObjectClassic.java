@@ -114,11 +114,17 @@ public class PageObjectClassic extends PageObject{
 	@FindBy(xpath="//li[@class='filter-block']")
 	private List<WebElement> filtrosAtivos;
 	
+	@FindBy(xpath="//a[contains(@href, 'order=product')]")
+	private List<WebElement> linksOrdenar;
+	
 	@FindBy(xpath="//button[contains(@class, 'filters-clear-all')]")
 	private WebElement btnLimparTodosFiltros;
 	
 	@FindBy(xpath="//section[@class='active_filters']")
 	private WebElement sectionFiltrosAtivos;
+	
+	@FindBy(xpath="//button[@class='btn-unstyle select-title']")
+	private WebElement btnOrdenar;
 
 	
 	public WebElement getLinkEntrar() {
@@ -251,6 +257,14 @@ public class PageObjectClassic extends PageObject{
 
 	public WebElement getSectionFiltrosAtivos() {
 		return sectionFiltrosAtivos;
+	}
+
+	public List<WebElement> getLinksOrdenar() {
+		return linksOrdenar;
+	}
+
+	public WebElement getBtnOrdenar() {
+		return btnOrdenar;
 	}
 		
 		
