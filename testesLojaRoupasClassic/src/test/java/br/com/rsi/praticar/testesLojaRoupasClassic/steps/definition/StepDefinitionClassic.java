@@ -177,6 +177,21 @@ public class StepDefinitionClassic {
 		stepB.removerFiltroAtivo(filtro);
 	}
 	
+	@When("^filtro pelo preco \"([^\"]*)\"$")
+	public void filtro_pelo_preco(String preco) throws Throwable {
+		stepB.filtrarPreco(preco);
+	}
+	
+	@When("^clico no botao 'limpar tudo'$")
+	public void clico_no_botao_limpar_tudo() throws Throwable {
+		stepB.clicarBotaoLimparTudo();
+	}
+
+	@Then("^verifico se removeu todos os filtros$")
+	public void verifico_se_removeu_todos_os_filtros() throws Throwable {
+		stepB.verificarRemocaoTodosFiltros();
+	}
+	
 	@Then("^verifico menssagem de resultado \"([^\"]*)\"$")
 	public void verifico_menssagem_de_resultado(String msg) throws Throwable {
 		stepB.verificarMenssagemResultado(msg);

@@ -105,11 +105,20 @@ public class PageObjectClassic extends PageObject{
 	@FindBy(xpath="//a[contains(@href, 'Estilos-')]/parent::label")
 	private List<WebElement> filtroEstilos;
 	
+	@FindBy(xpath="//a[contains(@href, 'q=Pre')]/parent::label")
+	private List<WebElement> filtroPrecos;
+	
 	@FindBy(xpath="//a[starts-with(@class,'thumbnail product')]")
 	private List<WebElement> produtos;
 	
 	@FindBy(xpath="//li[@class='filter-block']")
 	private List<WebElement> filtrosAtivos;
+	
+	@FindBy(xpath="//button[contains(@class, 'filters-clear-all')]")
+	private WebElement btnLimparTodosFiltros;
+	
+	@FindBy(xpath="//section[@class='active_filters']")
+	private WebElement sectionFiltrosAtivos;
 
 	
 	public WebElement getLinkEntrar() {
@@ -231,7 +240,18 @@ public class PageObjectClassic extends PageObject{
 	public List<WebElement> getFiltrosAtivos() {
 		return filtrosAtivos;
 	}
-	
-	
+
+	public List<WebElement> getFiltroPrecos() {
+		return filtroPrecos;
+	}
+
+	public WebElement getBtnLimparTodosFiltros() {
+		return btnLimparTodosFiltros;
+	}
+
+	public WebElement getSectionFiltrosAtivos() {
+		return sectionFiltrosAtivos;
+	}
+		
 		
 }

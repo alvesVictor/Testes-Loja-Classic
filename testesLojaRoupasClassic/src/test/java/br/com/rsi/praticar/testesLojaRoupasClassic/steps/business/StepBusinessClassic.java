@@ -212,4 +212,20 @@ public class StepBusinessClassic {
 		assertTrue(page.getFiltrosAtivos().size() == 1);
 	}
 
+	public void filtrarPreco(String preco) {
+		page.getFiltroPrecos().forEach(p ->{
+			if(p.getText().contains(preco)) {
+				p.click();
+			}
+		});
+	}
+
+	public void clicarBotaoLimparTudo() {
+		viewElement.click(page.getBtnLimparTodosFiltros());
+	}
+
+	public void verificarRemocaoTodosFiltros() {
+		assertTrue(!page.element(page.getSectionFiltrosAtivos()).isPresent());
+	}
+
 }
