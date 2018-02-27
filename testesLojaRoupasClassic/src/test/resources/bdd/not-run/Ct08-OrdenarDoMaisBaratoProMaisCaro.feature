@@ -9,7 +9,7 @@ Scenario Outline: ordenar do mais barato pro mais caro
   	And seleciono o produto "<prod>"
   	And seleciono 'Quantidade' "<qtd>"
   	And clico no botao 'Adicionar'
-  	Then verifico menssagem de resultado "<msg>"
+  	Then verifico mensagem de resultado "<msg>"
       
 Examples:
    | url                     		|tam|composi	|filtro		|preco				|opcao								|prod	|qtd|msg											|

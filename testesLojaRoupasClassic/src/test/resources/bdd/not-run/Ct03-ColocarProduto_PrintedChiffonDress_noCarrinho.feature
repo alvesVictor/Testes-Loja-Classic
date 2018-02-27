@@ -16,7 +16,7 @@ Scenario Outline: Colocar o produto Printed Chiffon Dress no carrinho
   	And seleciono 'Cor' "<cor>"
   	And seleciono 'Quantidade' "<qtd>"
   	And clico no botao 'Adicionar'
-  	Then verifico menssagem de resultado "<msg>"
+  	Then verifico mensagem de resultado "<msg>"
   
       
 Examples:

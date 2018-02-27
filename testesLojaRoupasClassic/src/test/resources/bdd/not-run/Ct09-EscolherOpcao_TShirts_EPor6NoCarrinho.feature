@@ -10,7 +10,7 @@ Scenario Outline: escolher a seção T-shirts, aumentar a quantidade do item a s
   	And seleciono 'Cor' "<cor>"
   	And seleciono 'Quantidade' "<qtd>"
   	And clico no botao 'Adicionar'
-  	And verifico menssagem de resultado "<msg>"
+  	And verifico mensagem de resultado "<msg>"
   	Then clico no botao 'Finalizar pedido'
   	  	
   	

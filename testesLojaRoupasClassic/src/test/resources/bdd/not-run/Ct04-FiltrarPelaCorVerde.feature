@@ -10,7 +10,7 @@ Scenario Outline: Filtrar pela cor Verde
   	And seleciono 'Cor' "<cor>"
   	And seleciono 'Quantidade' "<qtd>"
   	And clico no botao 'Adicionar'
-  	Then verifico menssagem de resultado "<msg>"
+  	Then verifico mensagem de resultado "<msg>"
   	
   
       

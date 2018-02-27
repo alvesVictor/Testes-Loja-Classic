@@ -16,7 +16,7 @@ Scenario Outline: Alterar Senha
   And insiro no campo 'Nova_senha' "<nSenha>"
   And clico no botao 'Mostrar'
   And clico no botao 'Salvar'
-  Then verifico a menssagem na tela "<msg>"
+  Then verifico a mensagem na tela "<msg>"
 
 Examples:
    | url                     		|email						|senha	|nome	|sobrenome	|nSenha|msg|
