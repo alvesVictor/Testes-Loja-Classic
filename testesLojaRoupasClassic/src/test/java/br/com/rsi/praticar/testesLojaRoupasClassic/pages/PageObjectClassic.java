@@ -85,10 +85,10 @@ public class PageObjectClassic extends PageObject{
 	private WebElement addCarrinho;
 	
 	@FindBy(xpath="//div[@class='modal fade in']")
-	private WebElement menssagemCarrinho;
+	private WebElement mensagemCarrinho;
 	
 	@FindBy(xpath="//h4[contains(@id, 'myModalLabel')]")
-	private WebElement menssagemCarrinhoResultado;
+	private WebElement mensagemCarrinhoResultado;
 	
 	@FindBy(xpath="//a[contains(normalize-space(text()), 'Todos os produtos')]")
 	private WebElement linkTodosProdutos;
@@ -125,6 +125,33 @@ public class PageObjectClassic extends PageObject{
 	
 	@FindBy(xpath="//button[@class='btn-unstyle select-title']")
 	private WebElement btnOrdenar;
+	
+	@FindBy(xpath="//a[contains(@href, 'women')]")
+	private WebElement linkWomen;
+	
+	@FindBy(xpath="//li[@id='category-5']/a[contains(@href, 'tshirts')]")
+	private WebElement linkTShirts;
+	
+	@FindBy(xpath="//button[@class='btn btn-touchspin js-touchspin bootstrap-touchspin-up']")
+	private WebElement btnUpQtd;
+	
+	@FindBy(xpath="//a[contains(text(), 'Finalizar pedido')]")
+	private WebElement btnFinalizarPedido;
+	
+	@FindBy(xpath="//div[@id='contact-link']/descendant::a[contains(text(),'Fale')]")
+	private WebElement linkFaleConosco;
+	
+	@FindBy(name="id_contact")
+	private WebElement selectAssunto;
+	
+	@FindBy(xpath="//textarea[contains(@name, 'message')]")
+	private WebElement campoMensagem;
+	
+	@FindBy(xpath="//input[contains(@name, 'submitMessage')]")
+	private WebElement btnEnviarMensagem;
+	
+	@FindBy(xpath="//div[starts-with(@class, 'col-xs-12 alert alert')]")
+	private WebElement divRespostaEnvioEmail;
 
 	
 	public WebElement getLinkEntrar() {
@@ -211,12 +238,12 @@ public class PageObjectClassic extends PageObject{
 		return addCarrinho;
 	}
 
-	public WebElement getMenssagemCarrinho() {
-		return menssagemCarrinho;
+	public WebElement getMensagemCarrinho() {
+		return mensagemCarrinho;
 	}
 
-	public WebElement getMenssagemCarrinhoResultado() {
-		return menssagemCarrinhoResultado;
+	public WebElement getMensagemCarrinhoResultado() {
+		return mensagemCarrinhoResultado;
 	}
 
 	public WebElement getLinkTodosProdutos() {
@@ -265,6 +292,42 @@ public class PageObjectClassic extends PageObject{
 
 	public WebElement getBtnOrdenar() {
 		return btnOrdenar;
+	}
+
+	public WebElement getLinkWomen() {
+		return linkWomen;
+	}
+
+	public WebElement getLinkTShirts() {
+		return linkTShirts;
+	}
+
+	public WebElement getBtnUpQtd() {
+		return btnUpQtd;
+	}
+
+	public WebElement getBtnFinalizarPedido() {
+		return btnFinalizarPedido;
+	}
+
+	public WebElement getLinkFaleConosco() {
+		return linkFaleConosco;
+	}
+
+	public WebElement getSelectAssunto() {
+		return selectAssunto;
+	}
+
+	public WebElement getCampoMensagem() {
+		return campoMensagem;
+	}
+
+	public WebElement getBtnEnviarMensagem() {
+		return btnEnviarMensagem;
+	}
+
+	public WebElement getDivRespostaEnvioEmail() {
+		return divRespostaEnvioEmail;
 	}
 		
 		

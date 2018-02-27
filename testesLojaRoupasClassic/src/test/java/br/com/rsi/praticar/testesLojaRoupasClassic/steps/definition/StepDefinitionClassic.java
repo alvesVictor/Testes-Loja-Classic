@@ -133,7 +133,7 @@ public class StepDefinitionClassic {
 	}
 
 	@When("^seleciono 'Quantidade' \"([^\"]*)\"$")
-	public void seleciono_Quantidade(String qtd) throws Throwable {
+	public void seleciono_Quantidade(int qtd) throws Throwable {
 		stepB.selecionarQuantidade(qtd);
 	}
 
@@ -192,9 +192,49 @@ public class StepDefinitionClassic {
 		stepB.clicarOrdenarPor();
 	}
 
+	@When("^clico no link 'Women'$")
+	public void clico_no_link_Women() throws Throwable {
+		stepB.clicarLinkWomen();
+	}
+
+	@When("^clico na opcao 'T-Shirts' categoria 'Tops'$")
+	public void clico_na_opcao_T_Shirts_categoria_Tops() throws Throwable {
+		stepB.clicarOpcaoTShirts();
+	}
+	
 	@When("^seleciono a opcao de ordenacao \"([^\"]*)\"$")
 	public void seleciono_a_opcao_de_ordenacao(String opcao) throws Throwable {
 		stepB.selecionarOpcaoOrdenacao(opcao);
+	}
+	
+	@When("^clico no link 'Fale conosco'$")
+	public void clico_no_link_Fale_conosco() throws Throwable {
+		stepB.clicarLinkFaleConosco();
+	}
+
+	@When("^seleciono o 'Assunto' \"([^\"]*)\"$")
+	public void seleciono_o_Assunto(String assunto) throws Throwable {
+		stepB.selecionarAssunto(assunto);
+	}
+
+	@When("^insiro no campo 'Mensagem' \"([^\"]*)\"$")
+	public void insiro_no_campo_Mensagem(String msg) throws Throwable {
+		stepB.inserirCampoMensagem(msg);
+	}
+
+	@When("^clico no botao 'Enviar'$")
+	public void clico_no_botao_Enviar() throws Throwable {
+		stepB.clicarBtnEnviar();
+	}
+
+	@Then("^verifico mensagem de envio de email \"([^\"]*)\"$")
+	public void verifico_mensagem_de_envio_de_email(String msg) throws Throwable {
+		stepB.verificarMensagemEnvioEmail(msg);
+	}
+	
+	@Then("^clico no botao 'Finalizar pedido'$")
+	public void clico_no_botao_Finalizar_pedido() throws Throwable {
+		stepB.clicarBtnFinalizarPedido();
 	}
 
 	@Then("^verifico se removeu todos os filtros$")
@@ -202,9 +242,9 @@ public class StepDefinitionClassic {
 		stepB.verificarRemocaoTodosFiltros();
 	}
 	
-	@Then("^verifico menssagem de resultado \"([^\"]*)\"$")
-	public void verifico_menssagem_de_resultado(String msg) throws Throwable {
-		stepB.verificarMenssagemResultado(msg);
+	@Then("^verifico mensagem de resultado \"([^\"]*)\"$")
+	public void verifico_mensagem_de_resultado(String msg) throws Throwable {
+		stepB.verificarMensagemResultado(msg);
 	}
 	
 	@Then("^verifico se usuario esta logado \"([^\"]*)\" \"([^\"]*)\"$")
@@ -212,9 +252,9 @@ public class StepDefinitionClassic {
 		stepB.verificarUsuarioLogado(nome, sobrenome);
 	}
 	
-	@Then("^verifico a menssagem na tela \"([^\"]*)\"$")
-	public void verifico_a_menssagem_na_tela(String msg) throws Throwable {
-		stepB.verificarMenssagemTela(msg);
+	@Then("^verifico a mensagem na tela \"([^\"]*)\"$")
+	public void verifico_a_mensagem_na_tela(String msg) throws Throwable {
+		stepB.verificarMensagemTela(msg);
 	}
 	
 	@Then("^verifico se o filtro foi removido$")

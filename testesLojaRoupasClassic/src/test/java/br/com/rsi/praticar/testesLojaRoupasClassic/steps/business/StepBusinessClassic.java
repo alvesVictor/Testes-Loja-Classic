@@ -118,7 +118,7 @@ public class StepBusinessClassic {
 		viewElement.clickAndWait(page.getInformacoesUsuario(), 10);
 	}
 
-	public void verificarMenssagemTela(String msg) {
+	public void verificarMensagemTela(String msg) {
 		page.waitFor(page.getAlertAlterarSenha()).isPresent();
 		assertTrue(page.element(page.getAlertAlterarSenha()).containsText(msg));
 	}
@@ -144,18 +144,21 @@ public class StepBusinessClassic {
 		});
 	}
 
-	public void selecionarQuantidade(String qtd) {
-		viewElement.clear(page.getQtdItem());
-		viewElement.sendText(page.getQtdItem(), qtd);
+	public void selecionarQuantidade(int qtd) {
+		//viewElement.clear(page.getQtdItem());
+		//viewElement.sendText(page.getQtdItem(), qtd);
+		for(int i=1;i < qtd;i++) {
+			viewElement.click(page.getBtnUpQtd());
+		}
 	}
 
 	public void clicarBtnAdicionar() {
 		viewElement.clickAndWait(page.getAddCarrinho(), 10);
 	}
 
-	public void verificarMenssagemResultado(String msg) {
-		page.waitFor(page.getMenssagemCarrinho()).isDisplayed();
-		assertTrue(page.element(page.getMenssagemCarrinhoResultado()).containsText(msg));
+	public void verificarMensagemResultado(String msg) {
+		page.waitFor(page.getMensagemCarrinho()).isDisplayed();
+		assertTrue(page.element(page.getMensagemCarrinhoResultado()).containsText(msg));
 	}
 
 	public void clicarLinkTodosProdutos() {
@@ -239,6 +242,39 @@ public class StepBusinessClassic {
 				op.click();
 			}
 		});
+	}
+
+	public void clicarLinkWomen() {
+		viewElement.mouseOver(page.getLinkWomen());
+	}
+
+	public void clicarOpcaoTShirts() {
+		viewElement.click(page.getLinkTShirts());
+	}
+
+	public void clicarBtnFinalizarPedido() {
+		viewElement.click(page.getBtnFinalizarPedido());
+	}
+
+	public void clicarLinkFaleConosco() {
+		viewElement.click(page.getLinkFaleConosco());
+	}
+
+	public void selecionarAssunto(String assunto) {
+		viewElement.selectByVisibleText(page.getSelectAssunto(), assunto);
+	}
+
+	public void inserirCampoMensagem(String msg) {
+		viewElement.sendText(page.getCampoMensagem(), msg);
+	}
+
+	public void clicarBtnEnviar() {
+		viewElement.click(page.getBtnEnviarMensagem());
+	}
+
+	public void verificarMensagemEnvioEmail(String msg) {
+		viewElement.waitForElementIsPresent(10, page.getDivRespostaEnvioEmail());
+		assertTrue(page.element(page.getDivRespostaEnvioEmail()).containsText(msg));
 	}
 
 }
