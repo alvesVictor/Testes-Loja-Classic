@@ -4,7 +4,6 @@ notifications:
 script:
  - cd archetype
  - mvn install
- - cd..
+ - cd ..
  - cd testesLojaRoupasClassic
  - mvn install
-
