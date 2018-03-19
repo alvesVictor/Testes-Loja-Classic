@@ -1,8 +1,10 @@
 language: java
-
+notifications:
+    email: victor.santos@rsinet.com.br
 script:
+ - cd archetype
+ - mvn install
+ - cd..
  - cd testesLojaRoupasClassic
  - mvn install
 
-notifications:
-    email: victor.santos@rsinet.com.br
