@@ -1,0 +1,1 @@
+[![Build Status](https://travis-ci.org/alvesVictor/Testes-Loja-Classic.svg?branch=master)](https://travis-ci.org/alvesVictor/Testes-Loja-Classic)
